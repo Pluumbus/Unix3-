@@ -12,9 +12,9 @@ int month = 1;
 int dayS = 1;
 
 
-for (int i = year; days > 364; days -= 365 )
+for (int i = year; days >= 366; days -= 365 )
 {
-    if(year % 4 == 0 || (year % 100 == 0 && year % 400 == 0))
+    if(year % 4 == 0)
     {
         days--;
     }
@@ -25,8 +25,9 @@ int[] monthDays = { 31, year % 4 == 0 ? 29 : 28 , 31, 30, 31, 30, 31, 31, 30, 31
 
 for (int i = month; days >= monthDays[i - 1]; days -= monthDays[month - 1] )
 {
-    month++;
 
+
+    month++;
 }
 if (month == 2 && days >= 28)
 {
