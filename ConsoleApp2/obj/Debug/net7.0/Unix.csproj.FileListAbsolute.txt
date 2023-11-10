@@ -1,0 +1,14 @@
+C:\Users\ilya_\Downloads\Telegram Desktop\ConsoleApp2\bin\Debug\net7.0\Unix.exe
+C:\Users\ilya_\Downloads\Telegram Desktop\ConsoleApp2\bin\Debug\net7.0\Unix.deps.json
+C:\Users\ilya_\Downloads\Telegram Desktop\ConsoleApp2\bin\Debug\net7.0\Unix.runtimeconfig.json
+C:\Users\ilya_\Downloads\Telegram Desktop\ConsoleApp2\bin\Debug\net7.0\Unix.dll
+C:\Users\ilya_\Downloads\Telegram Desktop\ConsoleApp2\bin\Debug\net7.0\Unix.pdb
+C:\Users\ilya_\Downloads\Telegram Desktop\ConsoleApp2\obj\Debug\net7.0\Unix.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ilya_\Downloads\Telegram Desktop\ConsoleApp2\obj\Debug\net7.0\Unix.AssemblyInfoInputs.cache
+C:\Users\ilya_\Downloads\Telegram Desktop\ConsoleApp2\obj\Debug\net7.0\Unix.AssemblyInfo.cs
+C:\Users\ilya_\Downloads\Telegram Desktop\ConsoleApp2\obj\Debug\net7.0\Unix.csproj.CoreCompileInputs.cache
+C:\Users\ilya_\Downloads\Telegram Desktop\ConsoleApp2\obj\Debug\net7.0\Unix.dll
+C:\Users\ilya_\Downloads\Telegram Desktop\ConsoleApp2\obj\Debug\net7.0\refint\Unix.dll
+C:\Users\ilya_\Downloads\Telegram Desktop\ConsoleApp2\obj\Debug\net7.0\Unix.pdb
+C:\Users\ilya_\Downloads\Telegram Desktop\ConsoleApp2\obj\Debug\net7.0\Unix.genruntimeconfig.cache
+C:\Users\ilya_\Downloads\Telegram Desktop\ConsoleApp2\obj\Debug\net7.0\ref\Unix.dll
