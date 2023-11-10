@@ -1,4 +1,6 @@
 ﻿
+using System.Numerics;
+
 Console.WriteLine("Введите Unix код");
 long input = Convert.ToInt64(Console.ReadLine());
 long seconds = input / 1000;
@@ -20,11 +22,11 @@ for (int i = year; days > 364; days -= 365 )
 }
 
 int[] monthDays = { 31, year % 4 == 0 ? 29 : 28 , 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-for (int i = month; days >= monthDays[i - 1]; days -= monthDays[i - 1] )
+for (int i = month; days >= monthDays[month - 1]; days -= monthDays[month - 1] )
 {
-
-    month++;
+    if (year % 4 == 0 && month == 2) { days -= 2; break; } else { month++; }
 }
+
 
 int day = Convert.ToInt32(days);
 int hour = Convert.ToInt32(hours % 24);
