@@ -23,14 +23,15 @@ for (int i = year; days >= 365; days -= 365 )
 }
 
 
-int[] monthDays = {1, 31, (year % 4 == 0 ? 29 : 28) , 31, 30, 31, 30, 31, 30, 30, 31, 31,30};
+int[] monthDays = {31, 31, (year % 4 == 0 ? 29 : 28) , 31, 30, 31, 30, 31, 30, 30, 31, 31,30};
 
 for (int i = month; days >= monthDays[month - 1]; days -= monthDays[month - 1] )
 {
-/*    if (days == 29 && month == 2) { break; }*/
+
+/*    if (days == 29 && month == 2) {  month --;break; }*/
     month++;
 }
-Console.WriteLine(days);
+
 if (year % 4 == 0) { days++; }
 days += dayS;
 
