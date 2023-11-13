@@ -26,7 +26,7 @@ int[] monthDays = { 31, (year % 4 == 0 ? 29 : 28) , 31, 30, 31, 30, 31, 30, 30, 
 
 for (int i = month; days >= monthDays[month - 1]; days -= monthDays[month - 1] )
 {
-    Console.WriteLine(days);
+
     if(days == 29) { break; }
     month++;
 }
