@@ -12,27 +12,29 @@ int month = 1;
 int dayS = 1;
 
 
-for (int i = year; days >= 366; days -= 365 )
+for (int i = year; days >= 365; days -= 365 )
 {
+    year++;
     if(year % 4 == 0)
     {
         days--;
     }
-    year++;
+
 }
 
-int[] monthDays = { 31, year % 4 == 0 ? 29 : 28 , 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+int[] monthDays = { 31, (year % 4 == 0 ? 29 : 28) , 31, 30, 31, 30, 31, 30, 30, 31, 31,31};
 
-for (int i = month; days >= monthDays[i - 1]; days -= monthDays[month - 1] )
+for (int i = month; days >= monthDays[month - 1]; days -= monthDays[month - 1] )
 {
-
-
+    Console.WriteLine(days);
+    if(days == 29) { break; }
     month++;
 }
 if (month == 2 && days >= 28)
 {
     days -= 2;
 }
+if (year % 4 == 0) { days++; }
 
 int day = Convert.ToInt32(days);
 int hour = Convert.ToInt32(hours % 24);
@@ -51,6 +53,10 @@ else
 
 string millisec = milliseconds.Length == 1 ? "00" + milliseconds : milliseconds.Length == 2 ? "0" + milliseconds : milliseconds;
 day += dayS;
+if (day == 0 || day < 0)
+{
+    day = dayS;
+}
 string yearHigh = (year % 4 == 0 || (year % 100 == 0 && year % 400 == 0)) ? "Високосный" : "Не високосный" ;
 string output = String.Format("{0:d2}.{1:d2}.{2} {3:d2}:{4:d2}:{5:d2}.{6} {7}",day,month,year,hour,minute,second,millisec,yearHigh);
 Console.WriteLine(output);
