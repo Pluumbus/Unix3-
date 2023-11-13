@@ -22,19 +22,21 @@ for (int i = year; days >= 365; days -= 365 )
 
 }
 
-int[] monthDays = { 31, (year % 4 == 0 ? 29 : 28) , 31, 30, 31, 30, 31, 30, 30, 31, 31,31};
+
+int[] monthDays = {1, 31, (year % 4 == 0 ? 29 : 28) , 31, 30, 31, 30, 31, 30, 30, 31, 31,30};
 
 for (int i = month; days >= monthDays[month - 1]; days -= monthDays[month - 1] )
 {
-
-    if(days == 29) { break; }
+/*    if (days == 29 && month == 2) { break; }*/
     month++;
 }
-if (month == 2 && days >= 28)
-{
-    days -= 2;
-}
+Console.WriteLine(days);
 if (year % 4 == 0) { days++; }
+days += dayS;
+
+
+if (year % 4 == 0 && month == 2 && days >= 30) { month++; days -= days; }
+if (year > 2038 && month == 2 && days == 29) { month++; days -= days; }
 
 int day = Convert.ToInt32(days);
 int hour = Convert.ToInt32(hours % 24);
@@ -52,7 +54,7 @@ else
 }
 
 string millisec = milliseconds.Length == 1 ? "00" + milliseconds : milliseconds.Length == 2 ? "0" + milliseconds : milliseconds;
-day += dayS;
+
 if (day == 0 || day < 0)
 {
     day = dayS;
